@@ -71,12 +71,12 @@ body{
     border-bottom-left-radius: 3px;
 }
 
-.stats {
+#stats {
     width: 100%;
     padding: 0;
 }
 
-.stats li{
+#stats li{
     width: 100%;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -90,6 +90,7 @@ body{
     margin: 0;
     width: 50%;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 .avatar-section{
@@ -146,7 +147,7 @@ body{
         padding: 0;
     }
 
-    .stats{
+    #stats{
         margin: 1rem;
     }
 
@@ -155,7 +156,7 @@ body{
         border-radius: 0;
     }
 
-    .stats >{
+    #stats >{
         font-size: 12px;
     }
 }

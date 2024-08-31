@@ -7,19 +7,26 @@ const pokemonWeight = document.getElementById('weight');
 const pokemonHeight = document.getElementById('height');
 const types = document.getElementById('types');
 const typesImg = document.getElementById('types-img');
-const hp = document.getElementById('hp');
-const attack = document.getElementById('attack');
-const defense = document.getElementById('defense');
-const specialAttack = document.getElementById('special-attack');
-const specialDefense = document.getElementById('special-defense');
-const speed = document.getElementById('speed');
+const pokemonStats = document.getElementById("stats")
 
-const pokemonData = {}
+const hpElement = document.getElementById('hp');
+const attackElement = document.getElementById('attack');
+const defenseElement = document.getElementById('defense');
+const specialAttackElement = document.getElementById('special-attack');
+const specialDefenseElement = document.getElementById('special-defense');
+const speedElement = document.getElementById('speed');
+
 
 const clearData = () => {
     pokemonImg.innerHTML = ""
     types.innerHTML = ""
     typesImg.innerHTML = ""
+    hpElement.innerHTML = ""
+    attackElement.innerHTML = ""
+    defenseElement.innerHTML = ""
+    specialAttackElement.innerHTML = ""
+    specialDefenseElement.innerHTML = ""
+    speedElement.innerHTML = ""
 }
 
 const fetchData = async (name_or_id) => {
@@ -62,7 +69,30 @@ const showPokemonData = (data) => {
 }
 
 const setStats = (stats) => {
-    console.log(stats)
+    console.log(stats[0])
+
+    hpElement.innerText = stats[0].base_stat;
+    attackElement.innerText = stats[1].base_stat;
+    defenseElement.innerText = stats[2].base_stat;
+    specialAttackElement.innerText = stats[3].base_stat;
+    specialDefenseElement.innerText = stats[4].base_stat;
+    speedElement.innerText = stats[5].base_stat;
+
+    /*
+    stats.forEach(pokemonStat => {
+        const regex = /^special/;
+        const pokemonStatName = regex.test(pokemonStat.stat.name)
+        ? pokemonStat.stat.name.includes('defense') 
+            ? 'Sp.Def' 
+            : 'Sp.Atk'
+        : pokemonStat.stat.name;
+
+        console.log(pokemonStat.stat.name)
+        pokemonStats.innerHTML += `
+            <li>${pokemonStatName}: <p class="stats-number" id="${pokemonStat.stat.name}">${pokemonStat.base_stat}</p></li>
+        `
+    });
+    */
 }
 
 const setImg = (img, name) => {
