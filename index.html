@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="styles.css" class="css">
+</head>
+
+<body>
+    <div class="pokemon-summary">
+        <div class="top-bar">
+            <div>
+                <label for="search-input">Search: </label>
+                <input type="text" id="search-input" required />
+                <button id="search-button">Go</button>
+            </div>
+            <p>Pokemon Summary</p>
+        </div>
+
+        <div class="main">
+            <div class="stats-section">
+                <ul class="stats">
+                    <li id="hp">HP: <p class="stats-number"></p>
+                    </li>
+                    <li id="hp">HP: <p class="stats-number"></p>
+                    </li>
+                    <li id="attack">Attack: <p class="stats-number"></p>
+                    </li>
+                    <li id="defense">Defense: <p class="stats-number"></p>
+                    </li>
+                    <li id="special-attack">Sp. Atk: <p class="stats-number"></p>
+                    </li>
+                    <li id="special-defense">Sp. Def: <p class="stats-number"></p>
+                    </li>
+                    <li id="speed">Speed: <p class="stats-number"></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="avatar-section">
+                <div class="name-and-id">
+                    <p id="pokemon-name"></p>
+                    <p id="pokemon-id"></p>
+                </div>
+                <div id="pokemon-avatar"></div>
+                <div id="types"></div>
+                <div id="types-img"></div>
+                <div class="height-and-weight">
+                    <p id="weight"></p>
+                    <p id="height"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
